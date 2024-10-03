@@ -6,7 +6,7 @@ export const Banner = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 bottom-0 w-screen h-screen z-100 bg-gray-200 opacity-50"
+        className="fixed top-0 bottom-0 w-screen h-screen z-100 bg-gray-200 opacity-70"
         initial={{ y: "100%", height: "100%" }}
         animate={{ y: "0%", height: "100%" }}
         exit={{ y: ["0%", "50%"], height: ["0%", "50%"] }}
