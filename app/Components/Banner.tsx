@@ -20,7 +20,7 @@ export const Banner = () => {
     };
   }, []);
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-screen" id="banner">
       <motion.div
         className="w-screen h-screen  bg-gray-200 opacity-70 z-10"
         initial={{ y: "100%", height: "100%" }}
@@ -52,28 +52,22 @@ export const Banner = () => {
         </div>
       </motion.div>
       <motion.div
-
         className="right-full w-screen h-screen  bg-gray-200 opacity-50"
         initial={{ x: "100%", width: "100%" }}
-
         animate={{ x: "0%", width: "0%" }}
         exit={{ x: ["0%", "100%"], width: ["0%", "100%"] }}
         transition={{ delay: 0.2, duration: 1.2, ease: "easeInOut" }}
       />
 
       <motion.div
-
         className="right-full w-screen h-screen  bg-gray-800 opacity-50"
         initial={{ x: "100%", width: "100%" }}
-
         animate={{ x: "0%", width: "0%" }}
         transition={{ delay: 0.4, duration: 1.4, ease: "easeInOut" }}
       />
       <motion.div
-
         className="right-full w-screen h-screen  bg-gray-200 opacity-50"
         initial={{ x: "100%", width: "100%" }}
-
         animate={{ x: "0%", width: "0%" }}
         transition={{ delay: 0.6, duration: 1.4, ease: "easeInOut" }}
       />
