@@ -2,7 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Banner } from "./Components/Banner";
+
 import { Menu } from "./Components/Menu";
+
+import Grid from "./Components/Grid";
+
 import Navbar from "./Components/Navbar";
 
 export default function Home() {
@@ -22,6 +26,7 @@ export default function Home() {
   }, []);
 
   return (
+
     <div className="flex flex-col h-full w-full">
       <Banner />
       {/* <div
@@ -40,6 +45,8 @@ export default function Home() {
           <Menu />
         </div>
       )}
+        <Grid />
     </div>
+
   );
 }
