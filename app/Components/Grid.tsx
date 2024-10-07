@@ -8,18 +8,25 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
 const Grid = () => {
   return (
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] mt-4">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={item.className}
-          icon={item.icon}
-        />
-      ))}
-    </BentoGrid>
+    <>
+      <div className="w-48 h-20 mx-auto">
+        <h1 className="text-2xl font-bold text-white bg-green-800 text-center p-3 rounded-md">
+          Les services
+        </h1>
+      </div>
+      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] mt-4">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            className={item.className}
+            icon={item.icon}
+          />
+        ))}
+      </BentoGrid>
+    </>
   );
 };
 const Skeleton = () => (
