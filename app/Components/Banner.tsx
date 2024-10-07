@@ -22,7 +22,7 @@ export const Banner = () => {
   return (
     <div className="h-screen w-screen">
       <motion.div
-        className="w-screen h-screen  bg-gray-200 opacity-70 z-10"
+        className="absolute top-0 bottom-0 w-screen h-screen  bg-gray-200 opacity-70 z-10"
         initial={{ y: "100%", height: "100%" }}
         animate={{ y: "0%", height: "100%" }}
         exit={{ y: ["0%", "50%"], height: ["0%", "50%"] }}
@@ -52,7 +52,7 @@ export const Banner = () => {
         </div>
       </motion.div>
       <motion.div
-        className="right-full w-screen h-screen  bg-gray-200 opacity-50"
+        className=" top-0 bottom-0 right-full w-screen h-screen  bg-gray-200 opacity-50"
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: "0%", width: "0%" }}
         exit={{ x: ["0%", "100%"], width: ["0%", "100%"] }}
@@ -60,13 +60,13 @@ export const Banner = () => {
       />
 
       <motion.div
-        className="right-full w-screen h-screen  bg-gray-800 opacity-50"
+        className="top-0 bottom-0 right-full w-screen h-screen  bg-gray-800 opacity-50"
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: "0%", width: "0%" }}
         transition={{ delay: 0.4, duration: 1.4, ease: "easeInOut" }}
       />
       <motion.div
-        className="right-full w-screen h-screen  bg-gray-200 opacity-50"
+        className="top-0 bottom-0 right-full w-screen h-screen  bg-gray-200 opacity-50"
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: "0%", width: "0%" }}
         transition={{ delay: 0.6, duration: 1.4, ease: "easeInOut" }}
