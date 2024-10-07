@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Banner } from "./Components/Banner";
 
+import Contact from "./Components/Contact";
 import { Divider } from "./Components/Divider";
 import Grid from "./Components/Grid";
 import { Hero } from "./Components/Hero";
@@ -48,6 +49,8 @@ export default function Home() {
       <Hero />
       <Divider />
       <Grid />
+      <Divider />
+      <Contact />
     </div>
   );
 }
