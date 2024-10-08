@@ -52,6 +52,7 @@ export default function Home() {
       <Divider />
       {/* <Contact />
        */}
+
       <ContactMe />
     </div>
   );
