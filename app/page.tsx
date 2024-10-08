@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 import { Banner } from "./Components/Banner";
 
-import Contact from "./Components/Contact";
 import { Divider } from "./Components/Divider";
 import Grid from "./Components/Grid";
 import { Hero } from "./Components/Hero";
 import { Menu } from "./Components/Menu";
 
+import { ContactMe } from "./Components/ContactMe";
 import Navbar from "./Components/Navbar";
 
 export default function Home() {
@@ -50,7 +50,10 @@ export default function Home() {
       <Divider />
       <Grid />
       <Divider />
-      <Contact />
+      {/* <Contact />
+       */}
+
+      <ContactMe />
     </div>
   );
 }
