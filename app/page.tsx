@@ -9,6 +9,7 @@ import Grid from "./Components/Grid";
 import { Hero } from "./Components/Hero";
 import { Menu } from "./Components/Menu";
 
+import { Footer } from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 
 export default function Home() {
@@ -51,6 +52,7 @@ export default function Home() {
       <Grid />
       <Divider />
       <Contact />
+      <Footer />
     </div>
   );
 }

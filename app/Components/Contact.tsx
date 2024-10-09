@@ -19,17 +19,54 @@ function ContactMe({}: Props) {
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl justify-evenly mx-auto items-center mb-4">
+    <div className="h-screen flex relative flex-col text-center md:text-left max-w-7xl justify-center mx-auto items-center mb-4">
       {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3> */}
 
-      <div className="flex flex-col space-y-10 mb-4">
-        <h4 className="text-4xl font-semibold text-center">
-          Contact
-          {/* <span className="decoration-[#F7AB0A]/50 underline">text2</span> */}
-        </h4>
+      <h4 className="text-4xl font-semibold mb-5">
+        Contact
+        {/* <span className="decoration-[#F7AB0A]/50 underline">text2</span> */}
+      </h4>
+      <div className="flex flex-col justify-center gap-8 md:flex-row md:mt-2 items-center  mb-4">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col space-y-2 w-fit mx-auto"
+        >
+          <div className="flex space-x-2">
+            <input
+              {...register("name")}
+              placeholder="Nom"
+              type="text"
+              className="contactInput bg-gray-200"
+            />
+            <input
+              {...register("email")}
+              placeholder="Email"
+              className="contactInput bg-gray-200"
+              type="email"
+            />
+          </div>
 
+          <input
+            {...register("subject")}
+            placeholder="Sujet"
+            className="contactInput bg-gray-200"
+            type="text"
+          />
+
+          <textarea
+            {...register("message")}
+            placeholder="Message"
+            className="contactInput bg-gray-200"
+          />
+          <button
+            type="submit"
+            className="bg-[#00a96e] py-5 px-10 rounded-md text-white font-bold text-lg"
+          >
+            Envoyer
+          </button>
+        </form>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="h-7 w-7  text-success" />
@@ -46,45 +83,6 @@ function ContactMe({}: Props) {
             <p className="text-2xl">anais.carlier@gmail.com</p>
           </div>
         </div>
-
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
-        >
-          <div className="flex space-x-2">
-            <input
-              {...register("name")}
-              placeholder="Nom"
-              type="text"
-              className="contactInput"
-            />
-            <input
-              {...register("email")}
-              placeholder="Email"
-              className="contactInput"
-              type="email"
-            />
-          </div>
-
-          <input
-            {...register("subject")}
-            placeholder="Sujet"
-            className="contactInput"
-            type="text"
-          />
-
-          <textarea
-            {...register("message")}
-            placeholder="Message"
-            className="contactInput"
-          />
-          <button
-            type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
-          >
-            Envoyer
-          </button>
-        </form>
       </div>
     </div>
   );
