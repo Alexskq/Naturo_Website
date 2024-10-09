@@ -14,7 +14,7 @@ const Grid = () => {
           Les services
         </h1>
       </div>
-      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] mt-4">
+      <BentoGrid className="max-w-4xl md:mx-auto md:auto-rows-[20rem] mx-4 mt-4">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
