@@ -15,6 +15,9 @@ const config: Config = {
       backgroundImage: {
         banner: "url('/images/banner.png')",
       },
+      fontFamily: {
+        sans: ["var(--font-lato)"],
+      },
     },
   },
   plugins: [require("daisyui")],
