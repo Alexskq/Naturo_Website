@@ -6,6 +6,13 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Lato } from "next/font/google";
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700"],
+  variable: "--font-lato",
+});
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -20,7 +27,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <div className=" w-full opacity-90">
+    <div className={`${lato.variable} font-sans w-full opacity-90`}>
       <Disclosure as="nav" className="bg-white ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
