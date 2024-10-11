@@ -12,8 +12,8 @@ export const Menu = () => {
     <div
       className={`${lato.variable} font-sans flex justify-around items-center w-full h-16 bg-gray-100 border shadow-sm shadow-gray-300 text-gray-500`}
     >
-      <ul className="menu flex justify-around items-center w-full h-full relative">
-        <li className="bg-transparent">
+      <ul className="menu flex justify-around items-center w-full h-full relative text-lg tracking-wider">
+        <li className="bg-transparent ">
           <Link href="#">Home</Link>
         </li>
         <li>

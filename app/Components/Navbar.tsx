@@ -15,10 +15,10 @@ const lato = Lato({
 });
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "#", current: true },
+  { name: "Items 1", href: "#", current: false },
+  { name: "Items 2", href: "#", current: false },
+  { name: "Contact", href: "#", current: false },
 ];
 
 function classNames(...classes) {
@@ -33,7 +33,7 @@ export default function Navbar() {
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button*/}
-              <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+              <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[#979F77] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open main menu</span>
                 <Bars3Icon
@@ -87,8 +87,8 @@ export default function Navbar() {
                 aria-current={item.current ? "page" : undefined}
                 className={classNames(
                   item.current
-                    ? "bg-gray-900 text-white"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    ? "bg-[#979F77] text-white"
+                    : "text-gray-500 hover:bg-gray-700 hover:text-white",
                   "block rounded-md px-3 py-2 text-base font-medium"
                 )}
               >

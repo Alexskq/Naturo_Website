@@ -2,7 +2,14 @@
 
 import { motion } from "framer-motion";
 import { CircleChevronDown } from "lucide-react";
+import { Lato } from "next/font/google";
 import { useEffect, useState } from "react";
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700"],
+  variable: "--font-lato",
+});
 
 export const Banner = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,11 +38,11 @@ export const Banner = () => {
         <div className="flex flex-col justify-center items-center h-full bg-[url('/banner.png')] bg-no-repeat bg-cover bg-center">
           <img src="/Logo.png" className="w-32 h-32 p-4" alt="Logo" />
           <div className="h-0  border-amber-800 border-[1.5px] w-28 bg-transparent my-3"></div>
-          <div className="flex flex-col">
-            <span className="text-4xl font-bold text-white text-center tracking-wider mb-3">
+          <div className={`${lato.variable} font-sans flex flex-col`}>
+            <span className="text-4xl md:text-5xl font-bold text-white text-center tracking-widest mb-3">
               Anaïs Carlier
             </span>
-            <span className="text-4xl font-bold text-white text-center tracking-wider mb-3">
+            <span className="text-3xl md:text-4xl font-bold text-white text-center tracking-widest mb-3">
               Naturopathe
             </span>
           </div>
@@ -44,7 +51,7 @@ export const Banner = () => {
         <div className="absolute bottom-0 w-full flex justify-center items-center">
           {!isMobile && (
             <CircleChevronDown
-              color="#92400e"
+              color="#979F77"
               strokeWidth={1}
               className="mb-4 font-weight-bold h-20 w-20 animate-bounce"
             />
