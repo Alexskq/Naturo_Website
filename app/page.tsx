@@ -8,10 +8,8 @@ import Grid from "./Components/Grid";
 import { Hero } from "./Components/Hero";
 import { Menu } from "./Components/Menu";
 
-
+import Contact from "./Components/Contact";
 import { Footer } from "./Components/Footer";
-
-import { ContactMe } from "./Components/ContactMe";
 
 import Navbar from "./Components/Navbar";
 
@@ -58,11 +56,7 @@ export default function Home() {
       <Contact />
       <Footer />
 
-      {/* <Contact />
-       */}
-
-      <ContactMe />
-
+      {/* <ContactMe /> */}
     </div>
   );
 }

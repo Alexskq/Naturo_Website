@@ -1,6 +1,13 @@
 "use client";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { Lato } from "next/font/google";
 import { SubmitHandler, useForm } from "react-hook-form";
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700"],
+  variable: "--font-lato",
+});
 
 type Inputs = {
   name: string;
@@ -19,7 +26,9 @@ function ContactMe({}: Props) {
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left max-w-7xl justify-center mx-auto items-center mb-4">
+    <div
+      className={`${lato.variable} font-sans h-screen flex relative flex-col text-center md:text-left max-w-7xl justify-center mx-auto items-center mb-4`}
+    >
       {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3> */}
@@ -62,24 +71,24 @@ function ContactMe({}: Props) {
           />
           <button
             type="submit"
-            className="bg-[#00a96e] py-5 px-10 rounded-md text-white font-bold text-lg"
+            className="bg-[#979F77] py-5 px-10 rounded-md text-white font-bold text-lg"
           >
             Envoyer
           </button>
         </form>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="h-7 w-7  text-success" />
-            <p className="text-2xl">0632864291</p>
+            <PhoneIcon className="h-7 w-7  text-[#979F77]" />
+            <p className="text-2xl">06 32 86 42 91</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="h-7 w-7 text-success" />
+            <MapPinIcon className="h-7 w-7 text-[#979F77]" />
             <p className="text-2xl">Hordain</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="h-7 w-7 text-success" />
+            <EnvelopeIcon className="h-7 w-7 text-[#979F77]" />
             <p className="text-2xl">anais.carlier@gmail.com</p>
           </div>
         </div>
