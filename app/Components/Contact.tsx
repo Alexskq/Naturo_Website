@@ -71,15 +71,7 @@ function ContactMe({}: Props) {
           />
           <button
             type="submit"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            className="bg-[#979F77] py-5 px-10 rounded-md text-white font-bold text-lg"
-=======
             className="bg-[var(--color-primary)] py-5 px-10 rounded-md text-white font-bold text-lg"
->>>>>>> Stashed changes
-=======
-            className="bg-[var(--color-primary)] py-5 px-10 rounded-md text-white font-bold text-lg"
->>>>>>> Stashed changes
           >
             Envoyer
           </button>
