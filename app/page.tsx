@@ -8,9 +8,22 @@ import Grid from "./Components/Grid";
 import { Hero } from "./Components/Hero";
 import { Menu } from "./Components/Menu";
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Contact from "./Components/Contact";
 import { Footer } from "./Components/Footer";
 
+=======
+import { Footer } from "./Components/Footer";
+=======
+import { Footer } from "./Components/Footer";
+
+import Contact from "./Components/Contact";
+>>>>>>> Stashed changes
+
+import Contact from "./Components/Contact";
+
+>>>>>>> Stashed changes
 import Navbar from "./Components/Navbar";
 
 export default function Home() {
@@ -56,6 +69,15 @@ export default function Home() {
       <Contact />
       <Footer />
 
+<<<<<<< Updated upstream
+=======
+      {/* <Contact />
+       */}
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       {/* <ContactMe /> */}
     </div>
   );
