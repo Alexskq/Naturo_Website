@@ -33,10 +33,10 @@ function ContactMe({}: Props) {
         Contact
       </h3> */}
 
-      <h4 className="text-4xl font-semibold mb-5">
+      <h1 className="text-2xl font-bold text-white bg-[#979F77] text-center py-3 px-4 rounded-md mb-3">
         Contact
         {/* <span className="decoration-[#F7AB0A]/50 underline">text2</span> */}
-      </h4>
+      </h1>
       <div className="flex flex-col justify-center gap-8 md:flex-row md:mt-2 items-center  mb-4">
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -71,7 +71,7 @@ function ContactMe({}: Props) {
           />
           <button
             type="submit"
-            className="bg-[var(--color-primary)] py-5 px-10 rounded-md text-white font-bold text-lg"
+            className="bg-[#979F77] py-5 px-10 rounded-md text-white font-bold text-lg"
           >
             Envoyer
           </button>
