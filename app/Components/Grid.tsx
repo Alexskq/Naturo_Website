@@ -9,12 +9,12 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 const Grid = () => {
   return (
     <>
-      <div className="w-48 h-20 mx-auto">
+      <div className="w-48 h-20 mx-auto mb-8">
         <h1 className="text-2xl font-bold text-white bg-[#979F77] text-center p-3 rounded-md">
           Les services
         </h1>
       </div>
-      <BentoGrid className="max-w-4xl md:mx-auto md:auto-rows-[20rem] mx-4 mt-4">
+      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -30,7 +30,7 @@ const Grid = () => {
   );
 };
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl  bg-dot-black/[0.2]  border border-transparent border-gray bg-neutral-100 "></div>
 );
 const items = [
   {
