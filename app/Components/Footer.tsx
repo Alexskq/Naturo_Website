@@ -7,10 +7,10 @@ export const Footer = () => {
       id="contact"
     >
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center ">
-        <p className="md:text-base text-sm md:font-normal font-light ml-3">
+        <span className="md:text-base text-sm md:font-normal font-light md:ml-3">
           Copyright © 2024 Alex
-        </p>
-        <div className="flex items-center md:gap-3  gap-6">
+        </span>
+        <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((profile) => (
             <div
               key={profile.id}
