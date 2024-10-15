@@ -10,7 +10,7 @@ const Grid = () => {
   return (
     <>
       <div className="w-48 h-20 mx-auto mb-8">
-        <h1 className="text-2xl font-bold text-white bg-[#979F77] text-center p-3 rounded-md">
+        <h1 className="text-2xl font-bold text-white bg-[#979F77] text-center p-3 rounded-md  mb-0 md:mb-4">
           Les services
         </h1>
       </div>
