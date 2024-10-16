@@ -27,7 +27,7 @@ export const Banner = () => {
     };
   }, []);
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-screen" id="home">
       <motion.div
         className="absolute top-0 bottom-0 w-screen h-screen  bg-gray-200 opacity-70 z-10"
         initial={{ y: "100%", height: "100%" }}

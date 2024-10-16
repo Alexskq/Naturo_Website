@@ -27,6 +27,7 @@ function ContactMe({}: Props) {
 
   return (
     <div
+      id="contact"
       className={`${lato.variable} font-sans h-screen flex relative flex-col text-center md:text-left max-w-7xl justify-center mx-auto items-center mb-4`}
     >
       {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">

@@ -14,16 +14,16 @@ export const Menu = () => {
     >
       <ul className="menu flex justify-around items-center w-full h-full relative text-lg tracking-wider">
         <li className="bg-transparent ">
-          <Link href="#">Home</Link>
+          <Link href="">Home</Link>
         </li>
         <li>
-          <Link href="#">Items 2</Link>
+          <Link href="/naturopathie">La Naturopathies</Link>
         </li>
         <li>
-          <Link href="#">Items 3</Link>
+          <Link href="#">Les Services</Link>
         </li>
         <li>
-          <Link href="#">Contact</Link>
+          <Link href="#contact">Contact</Link>
         </li>
       </ul>
     </div>
