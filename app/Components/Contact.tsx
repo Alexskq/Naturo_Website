@@ -1,7 +1,11 @@
 "use client";
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { Copy, CopyCheck } from "lucide-react";
 import { Lato } from "next/font/google";
+import { useState } from "react";
+import Confetti from "react-confetti";
 import { SubmitHandler, useForm } from "react-hook-form";
+import MagicButton from "./MagicButton";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -21,6 +25,20 @@ type Props = {};
 function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
 
+  const [copied, setCopied] = useState(false);
+
+  const [showConfetti, setShowConfetti] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("anaiscarlier.naturopathe@gmail.com");
+    setCopied(true);
+    setShowConfetti(true);
+
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 2000);
+  };
+
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:anaiscarlier.naturopathe@gmail.com?subject=${formData.subject}&body=Bonjour, Je suis ${formData.name}. ${formData.message} (${formData.email})`;
   };
@@ -28,7 +46,7 @@ function ContactMe({}: Props) {
   return (
     <div
       id="contact"
-      className={`${lato.variable} font-sans h-screen flex relative flex-col text-center md:text-left max-w-7xl justify-center mx-auto items-center mb-4`}
+      className={`${lato.variable} font-sans h-full flex relative flex-col text-center md:text-left w-full justify-center mx-auto items-center mb-4`}
     >
       {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
@@ -88,9 +106,30 @@ function ContactMe({}: Props) {
             <span className="text-2xl">Hordain</span>
           </div>
 
-          <div className="flex items-center space-x-2 justify-center">
+          {/* <div className="flex items-center space-x-2 justify-center">
             <EnvelopeIcon className="h-7 w-7 text-[#979F77]" />
             <span className="text-xl">anaiscarlier.naturopathe@gmail.com</span>
+          </div> */}
+          {/* 
+            <Lottie
+              options={{
+                loop: copied,
+                autoplay: copied,
+                animationData: animationData,
+                rendererSettings: {
+                  preserveAspectRatio: "xMidYMid slice",
+                },
+              }}
+            />*/}
+          <div>
+            {showConfetti && <Confetti />}
+            <MagicButton
+              title={copied ? "Email copied" : "Copy my email"}
+              icon={copied ? <CopyCheck /> : <Copy />}
+              position="left"
+              otherClasses="!bg-[#161a31] z-20"
+              handleClick={handleCopy}
+            />
           </div>
         </div>
       </div>
