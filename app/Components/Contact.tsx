@@ -2,7 +2,7 @@
 import { MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { Copy, CopyCheck } from "lucide-react";
 import { Lato } from "next/font/google";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import { SubmitHandler, useForm } from "react-hook-form";
 import MagicButton from "./MagicButton";
@@ -22,12 +22,32 @@ type Inputs = {
 
 type Props = {};
 
-function ContactMe({}: Props) {
+function Contact({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const [copied, setCopied] = useState(false);
 
   const [showConfetti, setShowConfetti] = useState(false);
+
+  // const [windowSize, setWindowSize] = useState({
+  //   width: undefined,
+  //   height: undefined,
+  // });
+
+  // const handleResize = () => {
+  //   setWindowSize({
+  //     width: window.innerWidth,
+  //     height: window.innerHeight,
+  //   });
+  // };
+  const [buttonSize, setButtonSize] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const button = document.getElementById("magic-button");
+    if (button) {
+      setButtonSize({ width: button.offsetWidth, height: button.offsetHeight });
+    }
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("anaiscarlier.naturopathe@gmail.com");
@@ -36,7 +56,7 @@ function ContactMe({}: Props) {
 
     setTimeout(() => {
       setShowConfetti(false);
-    }, 2000);
+    }, 3000);
   };
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
@@ -46,7 +66,7 @@ function ContactMe({}: Props) {
   return (
     <div
       id="contact"
-      className={`${lato.variable} font-sans h-full flex relative flex-col text-center md:text-left w-full justify-center mx-auto items-center mb-4`}
+      className={`${lato.variable} font-sans h-full flex relative flex-col text-center mx-3 md:mx-auto md:text-left justify-center  items-center mb-4`}
     >
       {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
@@ -86,16 +106,16 @@ function ContactMe({}: Props) {
           <textarea
             {...register("message")}
             placeholder="Message"
-            className="contactInput bg-gray-200 pl-2"
+            className="contactInput bg-gray-200 pl-2 "
           />
           <button
             type="submit"
-            className="bg-[#979F77] py-5 px-10 rounded-md text-white font-bold text-lg"
+            className="bg-[#979F77] py-5 px-10 rounded-md text-white font-bold text-lg mt-2"
           >
             Envoyer
           </button>
         </form>
-        <div className="space-y-10">
+        <div className="space-y-8">
           <div className="flex items-center space-x-2 justify-center">
             <PhoneIcon className="h-7 w-7  text-[#979F77]" />
             <span className="text-2xl">06 32 86 42 91</span>
@@ -110,24 +130,32 @@ function ContactMe({}: Props) {
             <EnvelopeIcon className="h-7 w-7 text-[#979F77]" />
             <span className="text-xl">anaiscarlier.naturopathe@gmail.com</span>
           </div> */}
-          {/* 
-            <Lottie
-              options={{
-                loop: copied,
-                autoplay: copied,
-                animationData: animationData,
-                rendererSettings: {
-                  preserveAspectRatio: "xMidYMid slice",
-                },
-              }}
-            />*/}
-          <div>
-            {showConfetti && <Confetti />}
+
+          <div className="relative inline-block" id="magic-button">
+            {showConfetti && (
+              <Confetti
+                numberOfPieces={100}
+                width={buttonSize.width}
+                height={buttonSize.height}
+
+                // drawShape={(ctx) => {
+                //   ctx.beginPath();
+                //   for (let i = 0; i < 22; i++) {
+                //     const angle = 0.2 * i;
+                //     const x = (0.2 + 1.5 * angle) * Math.cos(angle);
+                //     const y = (0.2 + 1.5 * angle) * Math.sin(angle);
+                //     ctx.lineTo(x, y);
+                //   }
+                //   ctx.stroke();
+                //   ctx.closePath();
+                // }}
+              />
+            )}
             <MagicButton
               title={copied ? "Email copied" : "Copy my email"}
               icon={copied ? <CopyCheck /> : <Copy />}
               position="left"
-              otherClasses="!bg-[#161a31] z-20"
+              otherClasses="!bg-[#979F77] !text-white !px-7 md:px-0"
               handleClick={handleCopy}
             />
           </div>
@@ -137,4 +165,4 @@ function ContactMe({}: Props) {
   );
 }
 
-export default ContactMe;
+export default Contact;

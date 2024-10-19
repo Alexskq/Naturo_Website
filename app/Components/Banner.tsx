@@ -35,7 +35,13 @@ export const Banner = () => {
         exit={{ y: ["0%", "50%"], height: ["0%", "50%"] }}
         transition={{ duration: 1.1, ease: "easeInOut" }}
       >
-        <div className="flex flex-col justify-center items-center h-full bg-[url('/banner.png')] bg-no-repeat bg-cover bg-center">
+        <div
+          className="flex flex-col justify-center items-center h-full bg-[url('/banner.png')] bg-no-repeat bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/banner.png')",
+          }}
+        >
           <img src="/Logo.png" className="w-32 h-32 p-4" alt="Logo" />
           <div className="h-0  border-amber-800 border-[1.5px] w-28 bg-transparent my-3"></div>
           <div className={`${lato.variable} font-sans flex flex-col`}>
