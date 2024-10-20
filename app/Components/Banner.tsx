@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CircleChevronDown } from "lucide-react";
 import { Lato } from "next/font/google";
 import { useEffect, useState } from "react";
+import { socialMedia } from "./data/index";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -36,12 +37,32 @@ export const Banner = () => {
         transition={{ duration: 1.1, ease: "easeInOut" }}
       >
         <div
-          className="flex flex-col justify-center items-center h-full bg-[url('/banner.png')] bg-no-repeat bg-cover bg-center"
+          className="flex flex-col relative gap-16 items-center h-full bg-[url('/banner.png')] bg-no-repeat bg-cover bg-center"
           style={{
             backgroundImage:
               "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/banner.png')",
           }}
         >
+          {isMobile ? null : (
+            <div className="flex items-center  md:gap-3 gap-6 text-[#979F77] self-start md:m-8 ">
+              {socialMedia.map((profile) => (
+                <div
+                  key={profile.id}
+                  className="cursor-pointer flex justify-center items-center mr-5"
+                >
+                  <a href={profile.url}>
+                    <img
+                      src={profile.img}
+                      alt={profile.alt}
+                      width={40}
+                      height={40}
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
+
           <img src="/Logo.png" className="w-32 h-32 p-4" alt="Logo" />
           <div className="h-0  border-amber-800 border-[1.5px] w-28 bg-transparent my-3"></div>
           <div className={`${lato.variable} font-sans flex flex-col`}>
