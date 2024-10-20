@@ -5,4 +5,10 @@ export const socialMedia = [
     alt: "linkedin",
     img: "LK.svg",
   },
+  {
+    id: 2,
+    url: "#contact",
+    alt: "mail",
+    img: "mail.svg",
+  },
 ];
