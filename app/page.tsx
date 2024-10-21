@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 400);
+      setIsMobile(window.innerWidth < 500);
     };
 
     handleResize();
