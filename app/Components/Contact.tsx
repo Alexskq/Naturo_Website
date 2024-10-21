@@ -20,9 +20,9 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
+// type Props = {};
 
-function Contact({}: Props) {
+function Contact() {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const [copied, setCopied] = useState(false);
