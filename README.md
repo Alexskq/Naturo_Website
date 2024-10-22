@@ -2,6 +2,6 @@
 
 Website presenting the services of a naturopath.
 
-## 🍀 Naturopath
+## ⚙️ Stack
 
 `React`
