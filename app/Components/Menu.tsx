@@ -17,7 +17,7 @@ export const Menu = () => {
           <Link href="">Home</Link>
         </li>
         <li>
-          <Link href="/naturopathie">La Naturopathies</Link>
+          <Link href="/naturopathie">La Naturopathie</Link>
         </li>
         <li>
           <Link href="#">Les Services</Link>

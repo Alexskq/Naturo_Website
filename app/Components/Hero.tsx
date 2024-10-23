@@ -9,7 +9,13 @@ export const Hero = () => {
       </figure>
       <div className="card-body w-[50%]">
         <h2 className="card-title">New album is released!</h2>
-        <p>Click the button to listen on Spotiwhy app.</p>
+        <p>
+          Click the{" "}
+          <a href="/naturopathie" className="text-lg text-[#979F77]">
+            <strong>Naturopathie</strong>
+          </a>{" "}
+          button to listen on Spotiwhy app.
+        </p>
       </div>
     </div>
   );
