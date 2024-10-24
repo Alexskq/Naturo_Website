@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 :root {
-  background: #ffffff;
+  background: var(--background);
   --font-lato: "Lato", sans-serif;
+  --green: #979f77;
+  --beige: #eee2d4;
+  --background: #fcf9f6;
 }
 
 /* button {
