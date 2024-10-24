@@ -1,6 +1,6 @@
 "use client";
 import { MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { Copy, CopyCheck } from "lucide-react";
+import { Clock4, Copy, CopyCheck } from "lucide-react";
 import { Lato } from "next/font/google";
 import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
@@ -66,7 +66,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className={`${lato.variable} font-sans h-full flex relative flex-col text-center mx-3 md:mx-auto md:text-left justify-center  items-center mb-4`}
+      className={`${lato.variable} font-sans h-full flex relative flex-col text-center md:mx-auto md:text-left justify-center items-center mb-4`}
     >
       {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
@@ -74,9 +74,8 @@ function Contact() {
 
       <h1 className="text-2xl font-bold text-white bg-[#979F77] text-center py-3 px-4 rounded-md mb-3 md:mb-5">
         Contact
-        {/* <span className="decoration-[#F7AB0A]/50 underline">text2</span> */}
       </h1>
-      <div className="flex flex-col justify-center gap-8 md:flex-row md:mt-2 items-center  my-4">
+      <div className="flex flex-col justify-center md:flex-row md:justify-between gap-8 md:mt-2 items-center  my-4">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 w-fit mx-auto"
@@ -86,12 +85,12 @@ function Contact() {
               {...register("name")}
               placeholder="Nom"
               type="text"
-              className="contactInput bg-gray-200 pl-2 text-gray-800"
+              className="contactInput bg-gray-200 p-2 text-gray-800 rounded-xl"
             />
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput bg-gray-200 pl-2"
+              className="contactInput bg-gray-200 p-2 rounded-xl"
               type="email"
             />
           </div>
@@ -99,31 +98,36 @@ function Contact() {
           <input
             {...register("subject")}
             placeholder="Sujet"
-            className="contactInput bg-gray-200 pl-2"
+            className="contactInput bg-gray-200 p-2 rounded-xl"
             type="text"
           />
 
           <textarea
             {...register("message")}
             placeholder="Message"
-            className="contactInput bg-gray-200 pl-2 "
+            className="contactInput bg-gray-200 p-2 rounded-xl"
+            rows={5}
           />
           <button
             type="submit"
-            className="bg-[#979F77] py-5 px-10 rounded-md text-white font-bold text-lg mt-2"
+            className="bg-[#979F77] py-5 px-10 text-white font-bold text-lg mt-2 rounded-xl"
           >
             Envoyer
           </button>
         </form>
-        <div className="space-y-8">
-          <div className="flex items-center space-x-2 justify-center">
-            <PhoneIcon className="h-7 w-7  text-[#979F77]" />
-            <span className="text-2xl">06 32 86 42 91</span>
+        <div className="space-y-8 bg-[#EEE2D4] h-full w-full flex flex-col justify-around p-4 md:pb-0 rounded-lg text-grey">
+          <div className="flex items-center space-x-2 justify-center text-[#979F77]">
+            <PhoneIcon className="h-7 w-7" />
+            <span className="text-xl">06 32 86 42 91</span>
+          </div>
+          <div className="flex items-center space-x-2 justify-center text-[#979F77]">
+            <Clock4 className="h-7 w-7 " />
+            <span className="text-xl">Du lundi au vendredi</span>
           </div>
 
-          <div className="flex items-center space-x-2 justify-center">
-            <MapPinIcon className="h-7 w-7 text-[#979F77]" />
-            <span className="text-2xl">Hordain</span>
+          <div className="flex items-center space-x-2 justify-center text-[#979F77]">
+            <MapPinIcon className="h-7 w-7 " />
+            <span className="text-xl">Hordain</span>
           </div>
 
           {/* <div className="flex items-center space-x-2 justify-center">

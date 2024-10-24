@@ -12,14 +12,14 @@ const Naturopathie = () => {
         {/* <div className="artboard artboard-horizontal phone-1 bg-slate-500 my-4 h-72 relative mt-10"> */}
 
         <div
-          className=" bg-[url('/oil.jpg')] bg-no-repeat bg-cover bg-center  w-[95vw] h-[200px] md:max-w-[80%]"
+          className=" bg-[url('/oil.jpg')] bg-no-repeat bg-cover bg-center  w-[95vw] h-[400px] md:max-w-[95%]"
           style={{
             backgroundImage:
               "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/oil.jpg')",
           }}
         ></div>
-        <div className="bg-green-500 h-[100px] w-[80%] relative top-[-50px] mx-auto opacity-50 flex justify-center items-center md:max-w-[60%]">
-          <h1 className="text-red-500 text-4xl font-bold">La Naturopathie</h1>
+        <div className="bg-black/85 h-[100px] w-[80%] relative top-[-50px] mx-auto opacity-50 flex justify-center items-center md:max-w-[60%]">
+          <h1 className="text-white text-4xl font-bold">La Naturopathie</h1>
         </div>
       </div>
       <div className="flex flex-col items-center pb-40">
