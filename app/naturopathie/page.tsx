@@ -4,7 +4,7 @@ const Naturopathie = () => {
   return (
     <div className="flex flex-col h-screen w-full justify-start items-center mx-auto">
       <Menu />
-      <div className="flex flex-col mt-10">
+      <div className="flex flex-col mt-10 items-center">
         {/* <p className="text-lg my-6 font-bold text-[#979F77] self-start flex justify-center items-center gap-2">
           <House size={20} strokeWidth={2} />
           <Link href="/">Accueil</Link>
@@ -12,19 +12,19 @@ const Naturopathie = () => {
         {/* <div className="artboard artboard-horizontal phone-1 bg-slate-500 my-4 h-72 relative mt-10"> */}
 
         <div
-          className=" bg-[url('/oil.jpg')] bg-no-repeat bg-cover bg-center  w-[95vw] h-[200px]"
+          className=" bg-[url('/oil.jpg')] bg-no-repeat bg-cover bg-center  w-[95vw] h-[200px] md:max-w-[80%]"
           style={{
             backgroundImage:
               "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/oil.jpg')",
           }}
         ></div>
-        <div className="bg-green-500 h-[100px] w-[80%] relative top-[-50px] mx-auto opacity-50 flex justify-center items-center">
+        <div className="bg-green-500 h-[100px] w-[80%] relative top-[-50px] mx-auto opacity-50 flex justify-center items-center md:max-w-[60%]">
           <h1 className="text-red-500 text-4xl font-bold">La Naturopathie</h1>
         </div>
       </div>
       <div className="flex flex-col items-center pb-40">
         <h2 className="text-lg font-semibold mb-3"> Titre de l&apos;article</h2>
-        <div className="flex flex-col justify-center items-center mx-5 text-justify md:mx-20">
+        <div className="flex flex-col justify-center items-center mx-5 text-justify md:mx-20 md:max-w-[60%]">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
             incidunt similique itaque esse aliquam architecto! Atque, deserunt
@@ -38,6 +38,7 @@ const Naturopathie = () => {
             laboriosam ad amet doloribus repudiandae ullam nam doloremque ipsum
             blanditiis, dolores, unde quo? In, veritatis.
           </p>
+          <br />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
             incidunt similique itaque esse aliquam architecto! Atque, deserunt
@@ -51,6 +52,7 @@ const Naturopathie = () => {
             laboriosam ad amet doloribus repudiandae ullam nam doloremque ipsum
             blanditiis, dolores, unde quo? In, veritatis.
           </p>
+          <br />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
             incidunt similique itaque esse aliquam architecto! Atque, deserunt
