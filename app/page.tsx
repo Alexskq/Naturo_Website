@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 import { Banner } from "./Components/Banner";
 
+import Contact2 from "./Components/Contact2";
 import { Divider } from "./Components/Divider";
 import Grid from "./Components/Grid";
 import { Hero } from "./Components/Hero";
 import { Menu } from "./Components/Menu";
 
-import Contact from "./Components/Contact";
 import { Footer } from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 
@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex flex-col h-full w-full ">
       <Banner />
       {/* <div
         className={`fixed w-full opacity-90 ${
@@ -52,7 +52,7 @@ export default function Home() {
       <Grid />
       <Divider />
 
-      <Contact />
+      <Contact2 />
       <Footer />
 
       {/* <Contact />

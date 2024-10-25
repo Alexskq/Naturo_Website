@@ -1,17 +1,10 @@
 "use client";
 import { MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { Clock4, Copy, CopyCheck } from "lucide-react";
-import { Lato } from "next/font/google";
 import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import { SubmitHandler, useForm } from "react-hook-form";
 import MagicButton from "./MagicButton";
-
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700"],
-  variable: "--font-lato",
-});
 
 type Inputs = {
   name: string;
@@ -62,35 +55,27 @@ function Contact() {
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:anaiscarlier.naturopathe@gmail.com?subject=${formData.subject}&body=Bonjour, Je suis ${formData.name}. ${formData.message} (${formData.email})`;
   };
-
   return (
-    <div
-      id="contact"
-      className={`${lato.variable} font-sans h-full flex relative flex-col text-center md:mx-auto md:text-left justify-center items-center mb-4`}
-    >
-      {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-        Contact
-      </h3> */}
-
-      <h1 className="text-2xl font-bold text-white bg-[#979F77] text-center py-3 px-4 rounded-md mb-3 md:mb-5">
+    <div className="mt-2 ">
+      <h1 className="text-2xl font-bold text-white bg-[#979F77] text-center p-3 w-48 mx-auto rounded-md mb-8 md:mb-10">
         Contact
       </h1>
-      <div className="flex flex-col justify-center md:flex-row md:justify-between gap-8 md:mt-2 items-center  my-4 ">
+      <div className="card lg:card-side bg-white shadow-xl mb-6 h-full  md:h-[70%] w-[90%] md:w-[80%] mx-auto pt-7 md:py-12 md:px-10">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 md:w-[70%] md:grow mx-auto"
         >
           <div className="flex space-x-2">
             <input
               {...register("name")}
               placeholder="Nom"
               type="text"
-              className="contactInput bg-gray-200 p-2 text-gray-800 rounded-xl"
+              className="contactInput bg-gray-200 p-2 text-gray-800 rounded-xl md:w-[40%]"
             />
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput bg-gray-200 p-2 rounded-xl"
+              className="contactInput bg-gray-200 p-2 rounded-xl md:grow"
               type="email"
             />
           </div>
@@ -115,18 +100,18 @@ function Contact() {
             Envoyer
           </button>
         </form>
-        <div className="space-y-8 bg-[#EEE2D4] h-full w-full flex flex-col justify-around p-4 md:pb-0 rounded-lg text-grey">
-          <div className="flex items-center space-x-2 justify-center text-[#979F77]">
-            <PhoneIcon className="h-7 w-7" />
+        <div className="card-body w-[70%] md:w-[50%]  justify-between md:justify-around items-center  md:gap-6 md:py-0 mx-auto">
+          <div className="flex items-center space-x-2 justify-center text-slate-400">
+            <PhoneIcon className="h-7 w-7 text-[#979F77]" />
             <span className="text-xl">06 32 86 42 91</span>
           </div>
-          <div className="flex items-center space-x-2 justify-center text-[#979F77]">
-            <Clock4 className="h-7 w-7 " />
+          <div className="flex items-center space-x-2 justify-center text-slate-400">
+            <Clock4 className="h-7 w-7 text-[#979F77]" />
             <span className="text-xl">Du lundi au vendredi</span>
           </div>
 
-          <div className="flex items-center space-x-2 justify-center text-[#979F77]">
-            <MapPinIcon className="h-7 w-7 " />
+          <div className="flex items-center space-x-2 justify-center text-slate-400">
+            <MapPinIcon className="h-7 w-7 text-[#979F77]" />
             <span className="text-xl">Hordain</span>
           </div>
 
