@@ -11,6 +11,7 @@ import { Menu } from "./Components/Menu";
 
 import { Footer } from "./Components/Footer";
 import Navbar from "./Components/Navbar";
+import Price from "./Components/Price";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -50,8 +51,8 @@ export default function Home() {
       <Hero />
       <Divider />
       <Grid />
+      <Price />
       <Divider />
-
       <Contact2 />
       <Footer />
 

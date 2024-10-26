@@ -15,7 +15,7 @@ type Inputs = {
 
 // type Props = {};
 
-function Contact() {
+const Contact = () => {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const [copied, setCopied] = useState(false);
@@ -56,7 +56,7 @@ function Contact() {
     window.location.href = `mailto:anaiscarlier.naturopathe@gmail.com?subject=${formData.subject}&body=Bonjour, Je suis ${formData.name}. ${formData.message} (${formData.email})`;
   };
   return (
-    <div className="mt-2 ">
+    <div className="mt-2 mb-8">
       <h1 className="text-2xl font-bold text-white bg-[#979F77] text-center p-3 w-48 mx-auto rounded-md mb-8 md:mb-10">
         Contact
       </h1>
@@ -152,6 +152,6 @@ function Contact() {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;
